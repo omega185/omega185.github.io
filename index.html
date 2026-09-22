@@ -197,6 +197,16 @@
         font-size: 16px;
       }
     }
+<div class="pagination">
+  <span class="disabled">← Prev</span>
+
+  <a href="index.html" class="active">1</a>
+  <a href="dust2.html">2</a>
+  <a href="inferno.html">3</a>
+
+  <a href="dust2.html">Next →</a>
+</div>
+}
   </style>
 </head>
 
@@ -547,8 +557,9 @@
       </p>
     </div>
   </div>
-
-
+.pagination .disabled {
+  opacity: 0.3;
+}
 </div>
 </div>
   <div class="coming-soon" id="more">
@@ -557,7 +568,36 @@
   </div>
 
 </section>
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 45px 20px 70px;
+}
 
+.pagination a,
+.pagination span {
+  padding: 12px 17px;
+  min-width: 46px;
+  text-align: center;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #d5d5d5;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.pagination .active {
+  background: #7ddcff;
+  color: #07131b;
+  font-weight: bold;
+}
+
+.pagination .disabled {
+  opacity: 0.3;
+}
 <footer>
   © 2026 OMEGA185 | CS2 Guide
 </footer>
